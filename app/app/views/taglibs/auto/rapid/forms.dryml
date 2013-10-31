@@ -1,6 +1,30 @@
 <!-- AUTOMATICALLY GENERATED FILE - DO NOT EDIT -->
 
 
+<def tag="form" for="Category">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="name" param/>
+    <div param="actions">
+      <submit label="#{ht 'category.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="List">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="title, description, expires" param/>
+    <div param="actions">
+      <submit label="#{ht 'list.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
 <def tag="form" for="User">
   <form merge param="default">
     <error-messages param/>
@@ -33,4 +57,16 @@
     </div>
   </form>
 </def>
+
+<def tag="form" for="Want">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="title, url, image, list" param/>
+    <div param="actions">
+      <submit label="#{ht 'want.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
 
