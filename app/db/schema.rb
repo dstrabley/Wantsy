@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131031032555) do
+ActiveRecord::Schema.define(:version => 20131031145234) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -25,7 +25,10 @@ ActiveRecord::Schema.define(:version => 20131031032555) do
     t.date     "expires"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "category_id"
   end
+
+  add_index "lists", ["category_id"], :name => "index_lists_on_category_id"
 
   create_table "users", :force => true do |t|
     t.string   "crypted_password",          :limit => 40

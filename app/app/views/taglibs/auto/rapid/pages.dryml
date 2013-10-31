@@ -207,7 +207,7 @@
 
     <content-body: param>
       <view:description param="description" />
-      <field-list fields="expires" param/>
+      <field-list fields="expires, category" param/>
     </content-body:>
 
   </page>

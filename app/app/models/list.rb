@@ -3,14 +3,15 @@ class List < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
-    title       :string
+    title       :string, :required
     description :text
     expires     :date
     timestamps	
   end
-   has_one	:category
-   attr_accessible :title, :description, :expires, :category, :category_id
-   
+  belongs_to :category
+  attr_accessible :title, :description, :expires, :category, :category_id
+  has_many :wants
+  
   # --- Permissions --- #
 
   def create_permitted?
